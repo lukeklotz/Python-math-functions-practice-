@@ -38,7 +38,11 @@ def getCommonDivisors(num1, num2):
     common_divisors = list(set(divisorsNum1) & set(divisorsNum2))
     print(f"common divisors are: {common_divisors}")
 
-def findGCF():
+    return common_divisors
+
+def findGCF(common_divisors):
+    GCF = max(common_divisors)
+    print(f"the GCF is: {GCF}")
     pass
 
 
@@ -47,7 +51,9 @@ def findGCF():
 num1 = int(input("num1: "))
 num2 = int(input("num2: "))
 
-getCommonDivisors(num1, num2)
+common_divisors = getCommonDivisors(num1, num2)
+
+findGCF(common_divisors)
 
 num = int(input("enter a number to see what its divisors are: "))
 
